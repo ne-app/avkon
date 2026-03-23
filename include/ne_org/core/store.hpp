@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2026, Amlal El Mahrouss and Ne.org Authors. All rights reserved
-// Official repository: https://github.com/ne-ci-org/storage-service
+// Copyright 2026, Amlal El Mahrouss. All rights reserved
+// Official repository: https://github.com/ne-ci-org/dojo
 
 #ifndef NEORG_STORE_CORE_HPP
 #define NEORG_STORE_CORE_HPP

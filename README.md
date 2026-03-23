@@ -1,6 +1,6 @@
 ![meta/png/logo.png](meta/png/logo.png)
 
-# 🍯 Ne.org Storage Service.
+# 🍯 The Dojo Storage Service.
 
 ## About:
 
