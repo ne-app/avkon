@@ -6,6 +6,7 @@
 #define NEORG_STORE_CORE_HPP
 
 #include <ne_org/core/detail/config.hpp>
+#include <ocl/alloc_op.hpp>
 
 namespace ne_org::core {
 

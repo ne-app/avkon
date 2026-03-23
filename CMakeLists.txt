@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(SimpleObjectStorage DESCRIPTION "The Store Service in modern C++" HOMEPAGE_URL "docs.store.nekernel.org")
 
+set(CMAKE_CXX_STANDARD 20)
+
 find_package(Boost REQUIRED)
 find_package(TBB REQUIRED)
 
