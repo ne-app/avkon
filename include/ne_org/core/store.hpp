@@ -7,6 +7,7 @@
 
 #include <ne_org/core/detail/config.hpp>
 #include <ocl/alloc_op.hpp>
+#include <string>
 
 namespace ne_org::core {
 
@@ -23,7 +24,7 @@ struct storage_pair {
 };
 
 template <typename Pair>
-struct storage_object final {
+struct storage_object final : public Pair {
   using key_type = typename Pair::key_type;
   using value_type = typename Pair::value_type;
 

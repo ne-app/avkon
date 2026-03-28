@@ -26,14 +26,8 @@ int main(int argc, char** argv) {
 
   net::io_context ioc{threads};
 
-  net::ip::tcp::acceptor acceptor{ioc};
-  endpoint_type ep(address, port);
-
-  acceptor.open(ep.protocol());
-  acceptor.set_option(net::socket_base::reuse_address(true));
-  acceptor.bind(ep);
-  acceptor.listen();
-
+  
+  
   ioc.run();
 
   return EXIT_SUCCESS;

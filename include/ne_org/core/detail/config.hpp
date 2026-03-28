@@ -21,6 +21,8 @@ struct storage_pair;
 
 using version_type = uint32_t;
 
+using stream_type = std::stringstream;
+
 }  // namespace ne_org::core
 
 #endif
