@@ -25,7 +25,10 @@ ne_org::core::stream_type& operator>>(ne_org::core::stream_type& is,
   if (!obj.is_valid(obj.key_)) ne_org::core::throw_error();
   if (obj.value_.bad()) ne_org::core::throw_error();
 
-  obj.value_ >> is.rdbuf();
+  ne_org::core::stream_type tmp_is;
+  tmp_is >> obj.value_.rdbuf();
+
+  is >> tmp_is.rdbuf();
 
   return is;
 }
