@@ -10,14 +10,23 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(Boost REQUIRED)
 find_package(TBB REQUIRED)
+find_package(GTK REQUIRED)
+find_package(PkgConfig REQUIRED)
 
-set(NEORG_STORE_SOURCES
-  src/ne_org/server/server.cpp
+pkg_check_modules(JSC REQUIRED javascriptcoregtk-6.0)
+pkg_check_modules(GTK REQUIRED gtk+-3.0)
+pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
+
+set(NEAPP_STORE_SOURCES
+  src/ne_app/app/pdf.viewer.cpp
 )
 
-add_library(Dojo ${NEORG_STORE_SOURCES})
+add_executable(Dojo ${NEAPP_STORE_SOURCES})
 
-target_include_directories(Dojo PUBLIC include/)
+target_include_directories(Dojo PUBLIC include/ ${JSC_INCLUDE_DIRS} 
+                          ${WGTK_INCLUDE_DIRS} ${GTK_INCLUDE_DIRS})
+target_link_libraries(Dojo ${JSC_LIBRARIES} ${WGTK_LIBRARIES} ${GTK_LIBRARIES})
 
 if (DEFINED INSTALL_STORE)
 install(DIRECTORY include/ DESTINATION include)
+endif()

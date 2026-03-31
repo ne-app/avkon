@@ -2,14 +2,14 @@
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
-#ifndef NEORG_STORE_CORE_HPP
-#define NEORG_STORE_CORE_HPP
+#ifndef NEAPP_STORE_CORE_HPP
+#define NEAPP_STORE_CORE_HPP
 
-#include <ne_org/core/detail/config.hpp>
+#include <ne_app/core/detail/config.hpp>
 #include <ocl/alloc_op.hpp>
 #include <string>
 
-namespace ne_org::core {
+namespace ne_app::core {
 
 inline void throw_error(
     const boost::source_location& src = BOOST_CURRENT_LOCATION) {
@@ -32,6 +32,6 @@ struct storage_object final : public Pair {
   value_type value_;
 };
 
-}  // namespace ne_org::core
+}  // namespace ne_app::core
 
-#endif  // ifndef NEORG_STORE_CORE_HPP
+#endif  // ifndef NEAPP_STORE_CORE_HPP

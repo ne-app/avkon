@@ -2,16 +2,16 @@
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
-#ifndef NEORG_STORE_CONFIG_HPP
-#define NEORG_STORE_CONFIG_HPP
+#ifndef NEAPP_STORE_CONFIG_HPP
+#define NEAPP_STORE_CONFIG_HPP
 
 #include <boost/asio.hpp>
 #include <boost/assert/source_location.hpp>
 
-#define NEORG_STORE_VERSION "v0.0.0-release"
-#define NEORG_STORE_VERSION_BCD 0x0000000
+#define NEAPP_STORE_VERSION "v0.0.0-release"
+#define NEAPP_STORE_VERSION_BCD 0x0000000
 
-namespace ne_org::core {
+namespace ne_app::core {
 
 template <typename Pair>
 struct storage_object;
@@ -23,6 +23,6 @@ using version_type = uint32_t;
 
 using stream_type = std::stringstream;
 
-}  // namespace ne_org::core
+}  // namespace ne_app::core
 
 #endif
