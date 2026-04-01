@@ -27,9 +27,9 @@ using namespace ::ne_app;
 int main(int argc, char** argv) {
   try {
     webview::webview w(false, nullptr);
-    w.set_title("Dojo - PDF");
+    w.set_title("Dojo - PDF Viewer");
     w.set_size(1280, 720, WEBVIEW_HINT_NONE);
-    w.navigate("file:///home/amlal/ne-ci-org/dojo/test/snippets/cpumemory.pdf");
+    w.navigate(argv[1] ? argv[1] : "");
     w.run();
   } catch (const webview::exception& e) {
     std::cerr << e.what() << std::endl;
