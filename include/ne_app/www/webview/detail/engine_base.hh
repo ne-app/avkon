@@ -139,6 +139,8 @@ window.__webview__.onUnbind(" +
 
   noresult set_html(const std::string &html) { return set_html_impl(html); }
 
+  noresult set_pdf(const std::stringstream &html) { return set_pdf_impl(html); }
+
   noresult init(const std::string &js) {
     add_user_script(js);
     return {};
@@ -158,6 +160,7 @@ protected:
   virtual noresult set_size_impl(int width, int height,
                                  webview_hint_t hints) = 0;
   virtual noresult set_html_impl(const std::string &html) = 0;
+  virtual noresult set_pdf_impl(const std::stringstream &pdf) = 0;
   virtual noresult eval_impl(const std::string &js) = 0;
 
   virtual user_script *add_user_script(const std::string &js) {

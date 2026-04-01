@@ -243,6 +243,16 @@ protected:
     return {};
   }
 
+
+  virtual noresult set_pdf_impl(const std::stringstream &pdf) {
+    auto pdf_b = pdf.str();
+    auto bytes_ptr = g_bytes_new_static(pdf_b.data(), pdf_b.size());
+    webkit_web_view_load_bytes(WEBKIT_WEB_VIEW(m_webview), bytes_ptr,
+                              "application/pdf", nullptr,
+                              "about:blank");
+    return {};
+  }
+
   noresult eval_impl(const std::string &js) override {
     // URI is null before content has begun loading.
     if (!webkit_web_view_get_uri(WEBKIT_WEB_VIEW(m_webview))) {
