@@ -1,4 +1,4 @@
-# 🍯 The Dojo SDK.
+# 🍯 The Aven SDK.
 
 ## Rationale:
 
