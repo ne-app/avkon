@@ -1,10 +1,10 @@
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: Propietary
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
 #include <ne_app/core/pdf.hpp>
 
-#define NEAPP_PDF_MAGIC "%PDF_1."
+#define NEAPP_PDF_MAGIC "%PDF_2."
 
 bool ne_app::pdf_pair::is_valid(ne_app::pdf_pair::key_type& key) noexcept {
   return key.starts_with(NEAPP_PDF_MAGIC);
