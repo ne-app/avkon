@@ -2,8 +2,8 @@
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
-#ifndef NEAPP_STORE_CORE_HPP
-#define NEAPP_STORE_CORE_HPP
+#ifndef NEAPP_AVEN_CORE_HPP
+#define NEAPP_AVEN_CORE_HPP
 
 #include <ne_app/core/detail/config.hpp>
 #include <ocl/alloc_op.hpp>
@@ -34,4 +34,4 @@ struct storage_object final : public Pair {
 
 }  // namespace ne_app::core
 
-#endif  // ifndef NEAPP_STORE_CORE_HPP
+#endif  // ifndef NEAPP_AVEN_CORE_HPP

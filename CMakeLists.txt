@@ -17,11 +17,11 @@ pkg_check_modules(JSC REQUIRED javascriptcoregtk-6.0)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)
 pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
 
-set(NEAPP_STORE_SOURCES
+set(NEAPP_AVEN_SOURCES
   src/ne_app/app/pdf.viewer.cpp
 )
 
-add_executable(Dojo ${NEAPP_STORE_SOURCES})
+add_executable(Dojo ${NEAPP_AVEN_SOURCES})
 
 target_include_directories(Dojo PUBLIC include/ ${JSC_INCLUDE_DIRS} 
                           ${WGTK_INCLUDE_DIRS} ${GTK_INCLUDE_DIRS})
