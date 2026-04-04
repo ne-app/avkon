@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026, Amlal El Mahrouss. All rights reserved
-# Official repository: https://github.com/ne-ci-org/dojo
+# Official repository: https://github.com/ne-app/dojo
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 4.0)
 
 project(Dojo DESCRIPTION "The Store Service in modern C++" HOMEPAGE_URL "docs.store.nekernel.org")
 
@@ -28,5 +28,5 @@ target_include_directories(Dojo PUBLIC include/ ${JSC_INCLUDE_DIRS}
 target_link_libraries(Dojo ${JSC_LIBRARIES} ${WGTK_LIBRARIES} ${GTK_LIBRARIES})
 
 if (DEFINED INSTALL_STORE)
-install(DIRECTORY include/ DESTINATION include)
+    install(DIRECTORY include/ DESTINATION include)
 endif()

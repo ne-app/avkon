@@ -25,7 +25,7 @@
 int main(int argc, char** argv) {
   try {
     webview::webview w(false, nullptr);
-    w.set_title("Dojo - PDF Viewer");
+    w.set_title("Aven - PDF Viewer");
     w.set_size(1280, 720, WEBVIEW_HINT_NONE);
     ne_app::core::stream_type ss;
     std::ifstream fs(argv[1] ? argv[1] : "");
