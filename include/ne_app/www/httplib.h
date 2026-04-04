@@ -5,3 +5,7 @@
 #pragma once
 
 #include <www/httplib/httplib.h>
+
+#define NE_APP_API "https://api.ne.app/"
+#define NE_APP_API_VERSION "v1"
+#define NE_APP_API_BASE NE_APP_API NE_APP_API_VERSION "/"
