@@ -9,6 +9,7 @@
 #include <sstream>
 
 namespace ne_app {
+
 struct pdf_pair;
 
 struct pdf_pair {
@@ -17,6 +18,7 @@ struct pdf_pair {
 
   bool is_valid(key_type& key) noexcept;
 };
+
 }  // namespace ne_app
 
 ne_app::core::stream_type& operator<<(ne_app::core::stream_type& os,
