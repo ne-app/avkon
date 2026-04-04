@@ -2,7 +2,7 @@
 # Copyright 2026, Amlal El Mahrouss. All rights reserved
 # Official repository: https://github.com/ne-app/dojo
 
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.31.6)
 
 project(Dojo DESCRIPTION "The Store Service in modern C++" HOMEPAGE_URL "docs.store.nekernel.org")
 
