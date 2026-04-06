@@ -2,7 +2,6 @@
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
-#include "ne_app/core/detail/config.hpp"
 #ifdef __linux__
 #define WEBVIEW_GTK
 #endif
@@ -16,19 +15,22 @@
 #endif
 
 #define WEBVIEW_IMPLEMENTATION
+
 #include <ne_app/www/webview.h>
 
 #include <fstream>
 #include <iostream>
 #include <ne_app/core/pdf.hpp>
 
-int main(int argc, char** argv) {
+int pdf_view_document(const char* path, const size_t len) {
+  if (!path || !len) return EXIT_FAILURE;
+
   try {
     webview::webview w(false, nullptr);
     w.set_title("Aven - PDF Viewer");
     w.set_size(1280, 720, WEBVIEW_HINT_NONE);
     ne_app::core::stream_type ss;
-    std::ifstream fs(argv[1] ? argv[1] : "");
+    std::ifstream fs(path ? path : "");
 
     if (fs.good()) {
       ss << fs.rdbuf();

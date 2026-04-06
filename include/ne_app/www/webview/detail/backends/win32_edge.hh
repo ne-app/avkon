@@ -663,6 +663,11 @@ protected:
     return {};
   }
 
+  noresult set_pdf_impl(const std::string &html) override {
+    m_webview->NavigateToString(widen_string(html).c_str());
+    return {};
+  }
+
   user_script add_user_script_impl(const std::string &js) override {
     auto wjs = widen_string(js);
     std::wstring script_id;

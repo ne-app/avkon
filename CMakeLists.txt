@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026, Amlal El Mahrouss. All rights reserved
-# Official repository: https://github.com/ne-app/dojo
+# Official repository: https://github.com/ne-Dojo/dojo
 
 cmake_minimum_required(VERSION 3.31.6)
 
@@ -30,7 +30,7 @@ target_include_directories(Dojo PUBLIC include/ ${JSC_INCLUDE_DIRS}
                           ${WGTK_INCLUDE_DIRS} ${GTK_INCLUDE_DIRS})
 target_link_libraries(Dojo ${JSC_LIBRARIES} ${WGTK_LIBRARIES} ${GTK_LIBRARIES})
 else()
-target_include_directories(Dojo PUBLIC include/)
+target_include_directories(Dojo PUBLIC include/ C:/local/boost_1_90_0/)
 endif()
 
 if (DEFINED INSTALL_STORE)
