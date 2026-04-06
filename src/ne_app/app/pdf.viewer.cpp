@@ -22,8 +22,8 @@
 #include <iostream>
 #include <ne_app/core/pdf.hpp>
 
-int pdf_view_document(const char* path, const size_t len) {
-  if (!path || !len) return EXIT_FAILURE;
+constexpr int pdf_view_document(const char* path, const size_t len) {
+  if (!len) return EXIT_FAILURE;
 
   try {
     webview::webview w(false, nullptr);

@@ -27,6 +27,6 @@ ne_app::core::stream_type& operator<<(ne_app::core::stream_type& os,
 ne_app::core::stream_type& operator>>(ne_app::core::stream_type& is,
                           ne_app::core::storage_object<ne_app::pdf_pair>&);
 
-int pdf_view_document(const char* path, const size_t len);
+constexpr int pdf_view_document(const char* path, const size_t len);
 
 #endif
