@@ -2,8 +2,8 @@
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
 // Official repository: https://github.com/ne-ci-org/dojo
 
-#ifndef NEAPP_STORE_PDF_HPP
-#define NEAPP_STORE_PDF_HPP
+#ifndef NEAPP_AVEN_PDF_HPP
+#define NEAPP_AVEN_PDF_HPP
 
 #include <ne_app/core/store.hpp>
 #include <sstream>
