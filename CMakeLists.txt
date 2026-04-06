@@ -21,6 +21,7 @@ endif()
 
 set(NEAPP_AVEN_SOURCES
   src/ne_app/app/pdf.viewer.cpp
+  src/ne_app/pdf.cpp
 )
 
 add_executable(Dojo ${NEAPP_AVEN_SOURCES})
@@ -30,6 +31,7 @@ target_include_directories(Dojo PUBLIC include/ ${JSC_INCLUDE_DIRS}
                           ${WGTK_INCLUDE_DIRS} ${GTK_INCLUDE_DIRS})
 target_link_libraries(Dojo ${JSC_LIBRARIES} ${WGTK_LIBRARIES} ${GTK_LIBRARIES})
 else()
+target_include_directories(Dojo PUBLIC include/ C:/local/ocl/)
 target_include_directories(Dojo PUBLIC include/ C:/local/boost_1_90_0/)
 endif()
 

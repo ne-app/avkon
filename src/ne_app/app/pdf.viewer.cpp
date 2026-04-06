@@ -22,8 +22,10 @@
 #include <iostream>
 #include <ne_app/core/pdf.hpp>
 
-constexpr int pdf_view_document(const char* path, const size_t len) {
+constexpr int pdf_view_document(const auto path, const size_t len) {
   if (!len) return EXIT_FAILURE;
+
+  static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "PATH IS NULLPTR.");
 
   try {
     webview::webview w(false, nullptr);

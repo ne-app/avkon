@@ -6,7 +6,6 @@
 #define NEAPP_AVEN_CORE_HPP
 
 #include <ne_app/core/detail/config.hpp>
-#include <ocl/alloc_op.hpp>
 #include <string>
 
 namespace ne_app::core {
