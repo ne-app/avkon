@@ -1,4 +1,4 @@
-# 🍯 The Aven SDK.
+# 🍯 The Avkon SDK.
 
 ## Rationale:
 
