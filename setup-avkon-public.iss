@@ -6,7 +6,7 @@
 #define AntSetupURL "https://www.ne-app.eu"
 
 [Setup]
-AppId={{09598CE8-703A-4411-AAEB-58D2B8363E2D}
+AppId={{223DD8EC-7770-4B90-AF00-CD9A02A616C2}
 AppName={#AntSetupName}
 AppVersion={#AntSetupVersion}
 AppPublisher={#AntSetupPublisher}
