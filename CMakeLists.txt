@@ -24,7 +24,7 @@ set(NEAPP_AVEN_SOURCES
   src/ne_app/pdf.cpp
 )
 
-add_executable(Avkon ${NEAPP_AVEN_SOURCES})
+add_library(Avkon ${NEAPP_AVEN_SOURCES})
 
 if (NOT DEFINED CMAKE_HOST_WIN32)
   target_include_directories(Avkon PUBLIC include/ ${JSC_INCLUDE_DIRS} 
