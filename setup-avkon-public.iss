@@ -1,0 +1,48 @@
+; (c) Ne.app 2026, all rights reserved.
+
+#define AntSetupName "Avkon C++ SDK"
+#define AntSetupVersion "v1.1.0-AVKON-PUBLIC"
+#define AntSetupPublisher "Ne.app"
+#define AntSetupURL "https://www.ne-app.eu"
+
+[Setup]
+AppId={{09598CE8-703A-4411-AAEB-58D2B8363E2D}
+AppName={#AntSetupName}
+AppVersion={#AntSetupVersion}
+AppPublisher={#AntSetupPublisher}
+AppPublisherURL={#AntSetupURL}
+AppSupportURL={#AntSetupURL}
+AppUpdatesURL={#AntSetupURL}
+AppComments=Public build of {#AntSetupName}
+AppCopyright=Ne.app
+DefaultDirName={autopf}\{#AntSetupName}
+DefaultGroupName={#AntSetupName}
+OutputBaseFilename=avkonsetup-public
+WizardImageFile=setupsplsh.bmp
+DisableWelcomePage=no
+DisableFinishedPage=no
+SolidCompression=yes
+WizardStyle=classic
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Files]
+Source: ".\visual-nectar\include\*"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\build\Avkon.dll"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\dll"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+[Registry]
+Root: HKLM; Subkey: SOFTWARE\Ne.app\; Flags: uninsdeletekeyifempty
+Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}; Flags: uninsdeletekey
+Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}\Settings; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}";
+Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}\Settings; ValueType: string; ValueName: "InstallType"; ValueData: "Public"
+
+[Code]
+procedure CurStepChanged(CurStep: TSetupStep);
+var
+  ErrorCode: Integer;
+begin
+  if CurStep = ssPostInstall then
+  begin
+  end;
+end;

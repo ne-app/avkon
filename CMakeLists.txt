@@ -22,6 +22,7 @@ endif()
 set(NEAPP_AVEN_SOURCES
   src/ne_app/app/pdf.viewer.cpp
   src/ne_app/pdf.cpp
+  src/ne_app/store.cpp
 )
 
 add_library(Avkon ${NEAPP_AVEN_SOURCES})

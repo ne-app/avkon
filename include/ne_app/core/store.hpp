@@ -10,11 +10,8 @@
 
 namespace ne_app::core {
 
-inline void throw_error(
-    const boost::source_location& src = BOOST_CURRENT_LOCATION) {
-  std::print("ERROR: SourceLocation: %s", src.to_string().c_str());
-  throw src;
-}
+void throw_error(
+    const boost::source_location& src = BOOST_CURRENT_LOCATION);
 
 template <typename KeyType, typename ValueType>
 struct storage_pair {
