@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Propietary
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
-// Official repository: https://github.com/ne-ci-org/dojo
+// Official repository: https://github.com/ne-app/dojo
 
 #ifndef NEAPP_AVEN_PDF_HPP
 #define NEAPP_AVEN_PDF_HPP

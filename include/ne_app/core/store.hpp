@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Propietary
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
-// Official repository: https://github.com/ne-ci-org/dojo
+// Official repository: https://github.com/ne-app/dojo
 
 #ifndef NEAPP_AVEN_CORE_HPP
 #define NEAPP_AVEN_CORE_HPP
@@ -12,7 +12,7 @@ namespace ne_app::core {
 
 inline void throw_error(
     const boost::source_location& src = BOOST_CURRENT_LOCATION) {
-  std::printf("ERROR: SourceLocation: %s", src.to_string().c_str());
+  std::print("ERROR: SourceLocation: %s", src.to_string().c_str());
   throw src;
 }
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Propietary
 // Copyright 2026, Amlal El Mahrouss. All rights reserved
-// Official repository: https://github.com/ne-ci-org/dojo
+// Official repository: https://github.com/ne-app/dojo
 
 #ifdef __linux__
 #define WEBVIEW_GTK
@@ -17,10 +17,9 @@
 #define WEBVIEW_IMPLEMENTATION
 
 #include <ne_app/www/webview.h>
-
-#include <fstream>
-#include <iostream>
 #include <ne_app/core/pdf.hpp>
+#include <iostream>
+#include <fstream>
 
 constexpr int pdf_view_document(const auto path, const size_t len) {
   if (!len) return EXIT_FAILURE;
@@ -29,7 +28,7 @@ constexpr int pdf_view_document(const auto path, const size_t len) {
 
   try {
     webview::webview w(false, nullptr);
-    w.set_title("Aven - PDF Viewer");
+    w.set_title("Avkon - PDF Viewer");
     w.set_size(1280, 720, WEBVIEW_HINT_NONE);
     ne_app::core::stream_type ss;
     std::ifstream fs(path ? path : "");
