@@ -28,7 +28,6 @@ WizardStyle=classic
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: ".\visual-nectar\include\*"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: ".\build\Avkon.dll"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\dll"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Registry]
@@ -36,13 +35,3 @@ Root: HKLM; Subkey: SOFTWARE\Ne.app\; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}; Flags: uninsdeletekey
 Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}\Settings; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}";
 Root: HKLM; Subkey: SOFTWARE\Ne.app\AVKON-SDK-{#AntSetupVersion}\Settings; ValueType: string; ValueName: "InstallType"; ValueData: "Public"
-
-[Code]
-procedure CurStepChanged(CurStep: TSetupStep);
-var
-  ErrorCode: Integer;
-begin
-  if CurStep = ssPostInstall then
-  begin
-  end;
-end;
