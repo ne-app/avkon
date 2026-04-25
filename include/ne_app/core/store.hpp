@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache 2.0
 // Copyright 2026, Ne.app. All rights reserved
-// Official repository: https://github.com/ne-app/dojo
+// Official repository: https://github.com/ne-app/avkon
 
 #ifndef NEAPP_AVEN_CORE_HPP
 #define NEAPP_AVEN_CORE_HPP
