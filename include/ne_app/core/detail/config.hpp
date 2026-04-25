@@ -8,7 +8,7 @@
 #include <boost/asio.hpp>
 #include <boost/assert/source_location.hpp>
 
-#define NEAPP_AVEN_VERSION "v1.0.0-release"
+#define NEAPP_AVEN_VERSION "v1.1.1-AVKON-PUBLIC"
 #define NEAPP_AVEN_VERSION_BCD 0x1000000
 
 namespace ne_app::core {
