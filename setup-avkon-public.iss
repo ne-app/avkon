@@ -29,6 +29,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: ".\include\*"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\LICENSE"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk\NOTICE"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: ".\build\Avkon.dll"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\dll"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Registry]
