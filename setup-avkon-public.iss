@@ -29,7 +29,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: ".\include\*"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: ".\LICENSE"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk\NOTICE"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk\src"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\LICENSE"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\sdk\NOTICE"; Flags: ignoreversion
 
 [Registry]
 Root: HKLM; Subkey: SOFTWARE\Ne.app\; Flags: uninsdeletekeyifempty
