@@ -36,6 +36,6 @@ else()
   target_include_directories(Avkon PUBLIC include/ ${BOOST_INSTALL_DIR})
 endif()
 
-if (DEFINED INSTALL_STORE)
+if (DEFINED NEAPP_INSTALL_AVEN)
   install(DIRECTORY include/ DESTINATION include)
 endif()
