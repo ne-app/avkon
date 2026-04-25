@@ -1,7 +1,7 @@
 ; (c) Ne.app 2026, all rights reserved.
 
 #define AntSetupName "Avkon C++ SDK"
-#define AntSetupVersion "v1.1.0-AVKON-PUBLIC"
+#define AntSetupVersion "v1.1.1-AVKON-PUBLIC"
 #define AntSetupPublisher "Ne.app"
 #define AntSetupURL "https://www.ne-app.eu"
 
@@ -13,7 +13,7 @@ AppPublisher={#AntSetupPublisher}
 AppPublisherURL={#AntSetupURL}
 AppSupportURL={#AntSetupURL}
 AppUpdatesURL={#AntSetupURL}
-AppComments=Public build of {#AntSetupName}
+AppComments=Public build of the {#AntSetupName}.
 AppCopyright=Ne.app
 DefaultDirName={autopf}\{#AntSetupName}
 DefaultGroupName={#AntSetupName}
@@ -28,6 +28,7 @@ WizardStyle=classic
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
+Source: ".\include\*"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\dll"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: ".\build\Avkon.dll"; Excludes: "*.gitkeep,*.keep"; DestDir: "{app}\public\dll"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Registry]
