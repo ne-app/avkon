@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.31.6)
 
-project(Avkon DESCRIPTION "The Avkon SDK in modern C++" HOMEPAGE_URL "docs.ne-app.eu/avkon")
+project(Avkon DESCRIPTION "The Avkon SDK in modern C++" HOMEPAGE_URL "docs.avkon.nekernel.org")
 
 set(CMAKE_CXX_STANDARD 23)
 
