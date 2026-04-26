@@ -4,16 +4,16 @@
 
 cmake_minimum_required(VERSION 3.31.6)
 
-project(Avkon DESCRIPTION "The Avkon SDK in modern C++" HOMEPAGE_URL "graph.ne-app.eu/api/docs/avkon")
+project(Avkon DESCRIPTION "The Avkon SDK in modern C++" HOMEPAGE_URL "docs.ne-app.eu/avkon")
 
 set(CMAKE_CXX_STANDARD 23)
 
-if (NOT DEFINED CMAKE_HOST_WIN32)
-  find_package(Boost REQUIRED)
-  find_package(TBB REQUIRED)
-  find_package(GTK REQUIRED)
-  find_package(PkgConfig REQUIRED)
+find_package(Boost REQUIRED)
+find_package(TBB REQUIRED)
+find_package(GTK REQUIRED)
 
+if (NOT DEFINED CMAKE_HOST_WIN32)
+  find_package(PkgConfig REQUIRED)
   pkg_check_modules(JSC REQUIRED javascriptcoregtk-6.0)
   pkg_check_modules(GTK REQUIRED gtk+-3.0)
   pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
