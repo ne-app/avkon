@@ -1,0 +1,13 @@
+#
+#  File: Jamfile.v2
+#  Author: Amlal El Mahrouss,
+#  Copyright 2026 Ne.app, licensed under the Apache 2.0 License
+#
+
+project pdf_view
+: default-build debug
+;
+
+exe pdf_view.o
+    : pdf_view.cpp
+    : <cxxstd>20 ;
