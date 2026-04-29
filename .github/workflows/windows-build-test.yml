@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Attempt APT
-      run: ver
+      run: echo "DONE"
