@@ -1,4 +1,4 @@
-name: Ne.app MinOSKrnl libDDK CI [BUILD]
+name: Ne.app Avkon Windows [BUILD]
 
 on:
   push:
