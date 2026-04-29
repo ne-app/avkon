@@ -1,0 +1,19 @@
+name: Ne.app MinOSKrnl libDDK CI [BUILD]
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+env:
+  BUILD_TYPE: KERNEL_BUILD
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Attempt APT
+      run: sudo apt upgrade -y && sudo apt update
