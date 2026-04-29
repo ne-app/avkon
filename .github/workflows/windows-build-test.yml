@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Attempt APT
-      run: sudo apt upgrade -y && sudo apt update
+      run: ver
