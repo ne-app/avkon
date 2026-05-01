@@ -1,7 +1,7 @@
 ; (c) Ne.app 2026, all rights reserved.
 
 #define AntSetupName "Avkon C++ SDK"
-#define AntSetupVersion "v1.1.2-AVKON-PUBLIC"
+#define AntSetupVersion "v1.1.3-AVKON-PUBLIC"
 #define AntSetupPublisher "Ne.app"
 #define AntSetupURL "https://www.ne-app.eu"
 
