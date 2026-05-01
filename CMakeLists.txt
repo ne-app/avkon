@@ -37,5 +37,5 @@ else()
 endif()
 
 if (DEFINED NEAPP_INSTALL_AVEN)
-  install(DIRECTORY include/ DESTINATION include)
+  install(DIRECTORY include DESTINATION include)
 endif()

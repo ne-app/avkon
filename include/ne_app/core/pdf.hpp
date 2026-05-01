@@ -30,8 +30,10 @@ ne_app::core::stream_type& operator>>(
     ne_app::core::storage_object<ne_app::pdf_pair>&);
 
 namespace ne_app::pdf {
-  /// @brief Renders a PDF document from a webview.
-constexpr int render(const auto path, const size_t len);
+  
+    /// @brief Renders a PDF document from a webview.
+  constexpr int render(const auto path, const size_t len);
+
 }
 
 #endif
