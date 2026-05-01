@@ -24,8 +24,8 @@
 constexpr int ne_app::pdf::render(const auto path, const size_t len) {
   if (!len) return EXIT_FAILURE;
 
-  static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "PATH IS NULLPTR.");
-
+  static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "THE ARGUMENT PATH IS OF NULLPTR_T.");
+  
   try {
     webview::webview w(false, nullptr);
     w.set_title("Avkon - PDF Viewer");
