@@ -6,6 +6,13 @@
 
 #include <www/httplib/httplib.h>
 
-#define NE_APP_API "https://api.ne.app/"
-#define NE_APP_API_VERSION "v1"
-#define NE_APP_API_BASE NE_APP_API NE_APP_API_VERSION "/"
+#define NE_APP_API "${API_URL}"
+#define NE_APP_API_VERSION "${API_VERSION}"
+#define NE_APP_API_BASE NE_APP_API NE_APP_API_VERSION "${API_BASE}"
+#define NE_APP_API_PORT "${API_PORT}"
+
+namespace ne_app {
+
+    struct api_config;
+
+}
