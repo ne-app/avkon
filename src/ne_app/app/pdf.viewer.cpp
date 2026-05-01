@@ -21,7 +21,7 @@
 #include <iostream>
 #include <fstream>
 
-constexpr int pdf_view_document(const auto path, const size_t len) {
+constexpr int ne_app::pdf::render(const auto path, const size_t len) {
   if (!len) return EXIT_FAILURE;
 
   static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "PATH IS NULLPTR.");

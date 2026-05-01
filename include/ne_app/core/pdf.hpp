@@ -21,12 +21,17 @@ struct pdf_pair {
 
 }  // namespace ne_app
 
-ne_app::core::stream_type& operator<<(ne_app::core::stream_type& os,
-                          ne_app::core::storage_object<ne_app::pdf_pair>&);
+ne_app::core::stream_type& operator<<(
+    ne_app::core::stream_type& os,
+    ne_app::core::storage_object<ne_app::pdf_pair>&);
 
-ne_app::core::stream_type& operator>>(ne_app::core::stream_type& is,
-                          ne_app::core::storage_object<ne_app::pdf_pair>&);
+ne_app::core::stream_type& operator>>(
+    ne_app::core::stream_type& is,
+    ne_app::core::storage_object<ne_app::pdf_pair>&);
 
-constexpr int pdf_view_document(const auto path, const size_t len);
+namespace ne_app::pdf {
+  /// @brief Renders a PDF document from a webview.
+constexpr int render(const auto path, const size_t len);
+}
 
 #endif
