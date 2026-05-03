@@ -4,8 +4,7 @@
 
 #include <ne_app/core/store.hpp>
 
-void throw_error(
-    const boost::source_location& src = BOOST_CURRENT_LOCATION) {
-  std::print("ERROR: SourceLocation: %s", src.to_string().c_str());
+void ne_app::core::throw_pdf_error(const boost::source_location& src) {
+  std::print("PDF-ERROR: Location: %s", src.to_string().c_str());
   throw src;
 }
