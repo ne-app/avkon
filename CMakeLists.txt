@@ -19,13 +19,13 @@ if (NOT DEFINED CMAKE_HOST_WIN32)
   pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
 endif()
 
-set(NEAPP_AVEN_SOURCES
+set(NEAPP_AVKON_SOURCES
   src/ne_app/app/pdf.viewer.cpp
   src/ne_app/pdf.cpp
   src/ne_app/store.cpp
 )
 
-add_library(Avkon ${NEAPP_AVEN_SOURCES})
+add_library(Avkon ${NEAPP_AVKON_SOURCES})
 
 if (NOT DEFINED CMAKE_HOST_WIN32)
   target_include_directories(Avkon PUBLIC include/ ${JSC_INCLUDE_DIRS} 
@@ -36,6 +36,6 @@ else()
   target_include_directories(Avkon PUBLIC include/ ${BOOST_INSTALL_DIR})
 endif()
 
-if (DEFINED NEAPP_INSTALL_AVEN)
+if (DEFINED NEAPP_INSTALL_AVKON)
   install(DIRECTORY include DESTINATION include)
 endif()
