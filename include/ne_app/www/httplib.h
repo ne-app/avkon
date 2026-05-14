@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <www/httplib/httplib.h>
+#include <ne_app/www/httplib/httplib.h>
 
 #define NE_APP_API "${API_URL}"
 #define NE_APP_API_VERSION "${API_VERSION}"
