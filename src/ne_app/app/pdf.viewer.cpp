@@ -18,19 +18,24 @@
 
 #include <ne_app/www/webview.h>
 #include <ne_app/core/pdf.hpp>
-#include <iostream>
+
 #include <fstream>
 
-constexpr int ne_app::pdf::render(const auto path, const size_t len) {
+static constexpr auto kViewName = "AVKON - PDF Viewer";
+
+constexpr int ne_app::pdf::render(const auto path, const size_t len, bool debug) {
   if (!len) return EXIT_FAILURE;
 
-  static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "THE ARGUMENT PATH IS OF NULLPTR_T.");
+  static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "path is nullptr_t.");
   
   try {
-    webview::webview w(false, nullptr);
-    w.set_title("Avkon - PDF Viewer");
+    webview::webview w(debug, nullptr);
+    
+    w.set_title(kViewName);
     w.set_size(1280, 720, WEBVIEW_HINT_NONE);
+
     ne_app::core::stream_type ss;
+    
     std::ifstream fs(path ? path : "");
 
     if (fs.good()) {
