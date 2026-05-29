@@ -9,5 +9,5 @@ project pdf_view
 ;
 
 exe pdf_view.o
-    : pdf_view.cpp
+    : pdf_view.ex.cpp
     : <cxxstd>20 ;
