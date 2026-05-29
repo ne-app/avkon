@@ -1,6 +1,6 @@
-# 🍯 The Avkon SDK.
+# AVKON.
 
-## Rationale:
+## Rationale
 
 Written in C++, the SDK lets you write beautiful C++ applications.
 
