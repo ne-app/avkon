@@ -663,7 +663,7 @@ protected:
     return {};
   }
 
-  noresult set_pdf_impl(const std::string &html) override {
+  noresult set_pdf_impl(const std::stringstream &html) override {
     m_webview->NavigateToString(widen_string(html).c_str());
     return {};
   }

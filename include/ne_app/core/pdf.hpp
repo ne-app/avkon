@@ -32,7 +32,7 @@ ne_app::core::stream_type& operator>>(
 namespace ne_app::pdf {
   
   /// @brief Renders a PDF document from a webview.
-  constexpr int render(const auto path, const size_t len, bool debug = false);
+  int render(const char* path, const size_t len, bool debug = false);
 
 }
 

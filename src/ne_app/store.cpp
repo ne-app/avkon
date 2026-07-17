@@ -5,6 +5,6 @@
 #include <ne_app/core/store.hpp>
 
 void ne_app::core::throw_pdf_error(const boost::source_location& src) {
-  std::print("PDF-ERROR: Location: %s", src.to_string().c_str());
+  std::printf("PDF-ERROR: Location: %s", src.to_string().c_str());
   throw src;
 }

@@ -37,5 +37,6 @@ else()
 endif()
 
 if (DEFINED NEAPP_INSTALL_AVKON)
-  install(DIRECTORY include DESTINATION include)
+  install(DIRECTORY include/ne_app DESTINATION include)
+  install_targets(llib Avkon)
 endif()

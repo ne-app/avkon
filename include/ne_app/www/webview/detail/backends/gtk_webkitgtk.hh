@@ -52,7 +52,7 @@
 #include <list>
 #include <memory>
 #include <string>
-
+#include <sstream>
 #include <gtk/gtk.h>
 
 #if GTK_MAJOR_VERSION >= 4

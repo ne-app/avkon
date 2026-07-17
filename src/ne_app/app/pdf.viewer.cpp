@@ -16,14 +16,14 @@
 
 #define WEBVIEW_IMPLEMENTATION
 
-#include <ne_app/www/webview.h>
+#include <ne_app/www/webview.hpp>
 #include <ne_app/core/pdf.hpp>
 
 #include <fstream>
 
 static constexpr auto kViewName = "AVKON - PDF Viewer";
 
-constexpr int ne_app::pdf::render(const auto path, const size_t len, bool debug) {
+int ::ne_app::pdf::render(const char* path, const size_t len, bool debug) {
   if (!len) return EXIT_FAILURE;
 
   static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "path is nullptr_t.");
