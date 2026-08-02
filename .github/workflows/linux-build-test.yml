@@ -7,7 +7,7 @@ on:
     branches: [ "develop" ]
 
 env:
-  BUILD_TYPE: KERNEL_BUILD
+  BUILD_TYPE: AVKON_BUILD
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Attempt APT
+    - name: Attempt APT install.
       run: sudo apt upgrade -y && sudo apt update
-    - name: Install Boost
+    - name: Attempt Boost install.
       run: sudo apt install libboost-dev libtbb-dev
