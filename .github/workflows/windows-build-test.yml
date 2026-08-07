@@ -1,4 +1,4 @@
-name: Ne.app Avkon Windows [BUILD]
+name: Ne.app ADB Windows [BUILD]
 
 on:
   push:

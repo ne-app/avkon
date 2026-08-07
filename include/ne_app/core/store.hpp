@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026, Ne.app. All rights reserved
-// Official repository: https://github.com/ne-app/avkon
+// Official repository: https://github.com/ne-app/adb
 
 #ifndef NEAPP_AVKON_CORE_HPP
 #define NEAPP_AVKON_CORE_HPP

@@ -1,4 +1,4 @@
-name: Ne.app Avkon Linux [BUILD]
+name: Ne.app ADB Linux [BUILD]
 
 on:
   push:
