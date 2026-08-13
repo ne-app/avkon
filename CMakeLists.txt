@@ -19,13 +19,13 @@ if (NOT DEFINED CMAKE_HOST_WIN32)
   pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
 endif()
 
-set(NEAPP_AVKON_SOURCES
+set(NEAPP_ADB_SOURCES
   src/ne_app/app/pdf.viewer.cpp
   src/ne_app/pdf.cpp
   src/ne_app/store.cpp
 )
 
-add_library(ADB ${NEAPP_AVKON_SOURCES})
+add_library(ADB ${NEAPP_ADB_SOURCES})
 
 if (NOT DEFINED CMAKE_HOST_WIN32)
   target_include_directories(ADB PUBLIC include/ ${JSC_INCLUDE_DIRS} 
@@ -36,7 +36,7 @@ else()
   target_include_directories(ADB PUBLIC include/ ${BOOST_INSTALL_DIR})
 endif()
 
-if (DEFINED NEAPP_INSTALL_AVKON)
+if (DEFINED NEAPP_INSTALL_ADB)
   install(DIRECTORY include/ne_app DESTINATION include)
   install_targets(llib ADB)
 endif()

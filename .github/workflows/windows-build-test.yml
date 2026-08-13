@@ -7,7 +7,7 @@ on:
     branches: [ "develop" ]
 
 env:
-  BUILD_TYPE: AVKON_BUILD
+  BUILD_TYPE: ADB_BUILD
 
 jobs:
   build:

@@ -5,11 +5,6 @@
 #pragma once
 
 #include <ne_app/core/store.hpp>
+#include <ne_app/www/httplib.hpp>
 
-namespace ne_app::tasks {
-
-struct task_tag final {
-  uint64_t id_{0};
-};
-
-}  // namespace ne_app::tasks
+namespace ne_app::quickstart {}
