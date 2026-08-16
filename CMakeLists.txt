@@ -14,18 +14,21 @@ find_package(GTK REQUIRED)
 
 if (NOT DEFINED CMAKE_HOST_WIN32)
   find_package(PkgConfig REQUIRED)
-  pkg_check_modules(JSC REQUIRED javascriptcoregtk-6.0)
-  pkg_check_modules(GTK REQUIRED gtk+-3.0)
-  pkg_check_modules(WGTK REQUIRED webkitgtk-6.0)
+  pkg_check_modules(JSC REQUIRED javascriptcoregtk-4.1)
+  pkg_check_modules(GTK REQUIRED gtk4)
+  pkg_check_modules(WGTK REQUIRED webkit2gtk-4.1)
 endif()
 
 set(NEAPP_ADB_SOURCES
   src/ne_app/app/pdf.viewer.cpp
+  src/ne_app/app/html.viewer.cpp
   src/ne_app/pdf.cpp
   src/ne_app/store.cpp
 )
 
-add_library(ADB ${NEAPP_ADB_SOURCES})
+add_library(ADB SHARED ${NEAPP_ADB_SOURCES})
+
+set_target_properties(ADB PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 
 if (NOT DEFINED CMAKE_HOST_WIN32)
   target_include_directories(ADB PUBLIC include/ ${JSC_INCLUDE_DIRS} 
