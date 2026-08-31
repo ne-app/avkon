@@ -2,7 +2,7 @@
 # Copyright 2026, Ne.app. All rights reserved
 # Official repository: https://github.com/ne-app/adb
 
-cmake_minimum_required(VERSION 3.31.6)
+cmake_minimum_required(VERSION 3.25.1)
 
 project(ADB DESCRIPTION "The ADB SDK in modern C++" HOMEPAGE_URL "docs.adb.nekernel.org")
 
