@@ -1,0 +1,19 @@
+name: Ne.app ADB Windows [BENCH]
+
+on:
+  push:
+    branches: [ "benchmarks" ]
+  pull_request:
+    branches: [ "benchmarks" ]
+
+env:
+  BUILD_TYPE: ADB_BENCH
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Attempt APT install.
+      run: echo "DONE"
