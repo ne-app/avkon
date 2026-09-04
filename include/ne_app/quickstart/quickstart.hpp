@@ -7,4 +7,10 @@
 #include <ne_app/core/store.hpp>
 #include <ne_app/www/httplib.hpp>
 
-namespace ne_app::quickstart {}
+namespace ne_app::quickstart {
+
+    /// @brief Information Header of a .qs.exe file.
+    struct qs_info_hdr;
+    struct qs_info_frm;
+
+}
