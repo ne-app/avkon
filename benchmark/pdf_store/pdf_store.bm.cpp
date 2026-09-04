@@ -6,12 +6,12 @@
 #include <benchmark/registration.h>
 #include <benchmark/state.h>
 
-static void BM_ReadPDF(benchmark::State& state) {
+static void BM_RenderPDF(benchmark::State& state) {
   for (auto _ : state) {
     /// TODO: Do heavy stuff with the sample PDF. Don't handle exceptions.
      ::ne_app::pdf::render("sample.pdf", ::strlen("sample.pdf"));
   }
 }
 
-BENCHMARK(BM_ReadPDF);
+BENCHMARK(BM_RenderPDF);
 BENCHMARK_MAIN();
