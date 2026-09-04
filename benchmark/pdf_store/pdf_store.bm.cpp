@@ -3,7 +3,14 @@
 // Official repository: https://github.com/ne-app/adb
 
 #include <ne_app/core/pdf.hpp>
+#include <benchmark/registration.h>
+#include <benchmark/state.h>
 
 static void BM_ReadPDF(benchmark::State& state) {
-
+  for (auto _ : state) {
+    /// TODO: Do heavy stuff with the sample PDF.
+  }
 }
+
+BENCHMARK(BM_ReadPDF);
+BENCHMARK_MAIN();
